@@ -1,0 +1,8 @@
+README.md
+setup.py
+DataIngestionUtils/DataGovernance.py
+DataIngestionUtils/__init__.py
+DataIngestionUtils.egg-info/PKG-INFO
+DataIngestionUtils.egg-info/SOURCES.txt
+DataIngestionUtils.egg-info/dependency_links.txt
+DataIngestionUtils.egg-info/top_level.txt
