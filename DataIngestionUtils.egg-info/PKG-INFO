@@ -8,8 +8,10 @@ Author-email: soubhagya.dash@tredence.com
 License: UNKNOWN
 Description: #Package
         
-        clean_null : returns df_accepted,df_rejected; two data frames after cleaning null values
-        clean_unique : returns df_duplicate,df_unique; two data frames after filtering unique values
+        ReadFileFromSource(spark,cnx,entryid,jdbcUrl,connectionProperties) -> BronzeDf,MetadataDf
+        DataqualityCheck(BronzeDf,MetadataDf) -> DF,metadata_dict
+        typecast(spark,DF,metadata_dict) -> SilverDf,RejectedDf
+        WriteFileToTarget(spark,cnx,entryid,jdbcUrl,connectionProperties,SilverDf,RejectedDf)
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License

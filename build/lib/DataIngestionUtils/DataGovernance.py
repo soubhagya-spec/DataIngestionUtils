@@ -53,6 +53,7 @@ def ReadOneDrive(spark,ConnectionDict):
   try:
     dbutils.fs.rm("file:/tmp/OneDriveFile",True)
   except:
+	message = " "
   return BronzeDf
 
 def download_file_from_one_drive(URL, destination):
