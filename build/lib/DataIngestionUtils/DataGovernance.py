@@ -53,7 +53,7 @@ def ReadOneDrive(spark,ConnectionDict):
   try:
     dbutils.fs.rm("file:/tmp/OneDriveFile",True)
   except:
-	message = " "
+    message  = False
   return BronzeDf
 
 def download_file_from_one_drive(URL, destination):
@@ -169,7 +169,7 @@ def ReadFileFromSource(spark,cnx,entryid,jdbcUrl,connectionProperties):
   return BronzeDf,MetadataDf
   
   
-def ReadFile(spaark,CatlogDict,ParameterDict,ColumnList):
+def ReadFile(spark,CatlogDict,ParameterDict,ColumnList):
   ConnectionDict =  eval(ParameterDict["SourceParameter"])
   if(CatlogDict["SourceType"]== "MySql" ):
     PushdownQuery  = ParameterDict["SourceQuery"]
